@@ -115,3 +115,39 @@ mycars = cars[:] #копирование массива для обработк�
 
 print ("===========================")
 
+#------------------------------
+# Условия
+#------------------------------
+
+
+age=30
+if age<=4:
+    print("You are baby " + str(age) + " years old")
+elif age>4 and age<12:
+    print("You are kid " + str(age) + " years old")
+elif age>=12 and age<19:
+    print("You are teen " + str(age) + " years old")
+else:
+    print("You are old " + str(age) + " years old")
+
+print("=========================")
+
+all_cars = ['chrusler', 'dacia', 'bmw', 'KIA', 'VW', 'seat', 'skoda', 'lada', 'audi', 'ford', 'Chevrolett']
+german_cars = ['bmw', 'VW', 'audi']
+
+if 'lada' in all_cars:
+    print("Yes, LADA is here")
+else:
+    print("No Lada here")
+
+for xxxx in all_cars:
+    if xxxx in german_cars:
+        print(xxxx + " is German car")
+    else:
+        print(xxxx + " is not a German car")
+
+
+    
+#------------------------------
+# Словари
+#------------------------------
