@@ -151,3 +151,73 @@ for xxxx in all_cars:
 #------------------------------
 # Словари
 #------------------------------
+
+enemy = {
+    'loc_x': 70,
+    'loc_y': 50,
+    'color': 'green',
+    'health': 100,
+    'name': 'Mudillo',
+    'image': ['image1.jpg', 'image2.jpg', 'image3.jpg']
+}
+
+print("location X = " + str(enemy['loc_x']))
+print("location Y = " + str(enemy['loc_y']))
+print("His name is: " + enemy['name'])
+
+enemy['rank'] = 'Admiral' #Добавить параметр
+print (enemy)
+del enemy['rank'] #удалить параметр
+print (enemy)
+
+enemy['loc_x'] = enemy['loc_x'] + 40
+enemy['health'] = enemy['health'] - 30
+if enemy['health']<80:
+    enemy['color'] = 'yellow'
+print (enemy)
+
+print(enemy.keys())
+print(enemy.values())
+print ("=================")
+
+all_enemies = [] #Массив из десяти словарей
+#all_enemies.append(enemy)
+for x in range(0,10):
+    all_enemies.append(enemy.copy())
+
+
+
+all_enemies[5]['health'] = 30
+all_enemies[8]['name'] = "Kozel"
+all_enemies[2]['loc_x'] += 4
+
+for ene in all_enemies:
+    print(ene)
+
+
+#------------------------------
+# Ввод данных от пользователя
+#------------------------------
+
+#name = input("Please enter your name: ")
+#print ("Your name is " + name)
+#num11 = input ("enter X: ")
+#num12 = input ("enter Y: ")
+#sum = int(num11) + int(num12)
+#print(sum)
+#message = ""
+
+#while message != 'sekret':
+#    message = input("Enter Password ")
+#    if message == "sekret":
+#        break
+#    print(message + "Password is not correct")
+#print("Password was:" + message)
+
+mylist = []
+msg = ""
+while msg != 'stop'.upper():
+    msg = input("Enter new item, and STOP to finish ")
+    mylist.append(msg)
+
+print(mylist)
